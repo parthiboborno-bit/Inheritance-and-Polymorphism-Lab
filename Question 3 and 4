@@ -5,10 +5,14 @@ class Instrument:
 class Guitar(Instrument):
     def play(self):
         print("The guitar strums")
+    def tune(self):
+        print("The guitar is tuned")
 
 def performance(Instrument):
     print("Instrument performance")
     Instrument.play()
+    Instrument.tune()
 
 G = Guitar()
 G.play()
+G.tune()
