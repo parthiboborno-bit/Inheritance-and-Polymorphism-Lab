@@ -1,0 +1,28 @@
+class Movie:
+    def __init__(self, title, genre, rating):
+        self.__title = title
+        self.genre = genre
+        self.__rating = rating
+
+    def set_title(self, title):
+        self.__title = title
+
+    def get_title(self):
+        return self.__title
+
+    def set_genre(self, genre):
+        self.__genre = genre
+
+    def get_genre(self):
+        return self.genre
+
+    def set_rating(self, rating):
+        self.__rating = rating
+
+    def get_rating(self):
+        return self.__rating
+
+Movie1 = Movie("Avengers: Endgame", "Action, Superhero", "TV- 14")
+print(Movie1.get_title())
+print(Movie1.get_genre())
+print(Movie1.get_rating())
