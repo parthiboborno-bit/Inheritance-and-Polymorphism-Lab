@@ -1,0 +1,15 @@
+class Wallet:
+    def __init__(self, balance):
+        self.__balance = balance
+    def get_balance(self):
+        return self.__balance
+    def set_balance(self, balance):
+        if 0 <= balance:
+            self.__balance = balance
+        else:
+            print("Error! Balance cannot be less than 0.")
+
+balance1 = Wallet(100)
+balance2 = Wallet(200)
+print(balance1.get_balance())
+print(balance2.get_balance())
