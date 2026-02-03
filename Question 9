@@ -12,5 +12,5 @@ class Circle:
     def area(self):
         return math.pi * self.__radius * self.__radius
 
-r1 = Circle(5.0)
+r1 = Circle(float(input("Radius: ")))
 print(r1.area())
