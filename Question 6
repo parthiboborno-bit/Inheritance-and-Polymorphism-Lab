@@ -1,0 +1,19 @@
+class Transport:
+    def move(self):
+        print("The transport is on the move.")
+class Bus(Transport):
+    def move(self):
+        print("The bus is driven by the bus driver.")
+
+class Train(Transport):
+    def move(self):
+        print("The train is chugging along by the train conductor.")
+
+def begin_movement(Transport):
+  Transport.move()
+  
+bus = Bus()
+train = Train()
+
+begin_movement(bus)
+begin_movement(train)
