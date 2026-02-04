@@ -1,32 +1,23 @@
 class User_ID:
     def __init__(self, name, ID):
-        self.__name = name
-        self.__ID = ID
-class Normal_User(User_ID):
-    def __init__(self):
-        return self.__name
+        self._name = name
+        self._ID = ID
 
-    def get_ID(self):
-        return self.__ID
-    def get_name(self):
-        return self.__name
+class Regular_User(User_ID):
+    def __init__(self, name, ID):
+         User_ID.__init__(self, name, ID)
+
+    def Regular_User(self):
+        return f"{self._name} and ID number: {self._ID} is registered as a regular user."
 
 class Admin_User(User_ID):
-    def __init__(self, name):
-        self.__name = name
+    def __init__(self, name, ID):
+        User_ID.__init__(self, name, ID)
 
-    def get_name(self):
-        return self.__name
-        print(f"{self.__name} is an Admin User")
+    def Admin_User(self):
+        return f"{self._name} and ID number: {self._ID} is registered as a administrator."
 
-    def get_ID(self):
-        return self.__ID
-        print(f"{self.__ID} is an Admin ID")
-
-Admin1 = Admin_User("Admin1", ID = 1359)
-User1 = Normal_User("Normal1", ID = 45)
-
-print(Admin1.get_name)
-print(Admin1.get_ID())
-print(User1.get_name)
-print(User1.get_ID())
+User_1 = Regular_User("Eddie", 4358)
+Admin_1 = Admin_User("Monaghan", 3491)
+print(User_1.Regular_User())
+print(Admin_1.Admin_User())
