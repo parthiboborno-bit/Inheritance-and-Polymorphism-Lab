@@ -1,0 +1,34 @@
+class GameCharacter:
+    def __init__(self, name):
+        self.name = name
+    def movement(self):
+        print("The Character Moves")
+    def attack(self):
+        print("The Character Attacks")
+    def defense(self):
+        print("The Character Defends")
+
+class Hero(GameCharacter):
+    def movement(self):
+        print("The Hero Moves Steadily")
+
+    def attack(self):
+        print("The Hero Attacks Strongly")
+
+    def defense(self):
+        print("The Hero Defends ")
+
+class Wizard(Hero, GameCharacter):
+    def movement(self):
+        print("The Wizard Moves Steadily")
+
+    def attack(self):
+        print("The Wizard Attacks Using Magic")
+
+    def defense(self):
+        print("The Wizard Defends Using Magic ")
+
+Instance_1 = Wizard("Wizard")
+Instance_1.movement()
+Instance_1.attack()
+Instance_1.defense()
